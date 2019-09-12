@@ -37,14 +37,14 @@ cd Docker
 docker build -t qpan/jupyter .
 ```
 
-### Windows 7
+### Windows 7, VirtualBox
 
 ```
 cd D:\20190904-Training_Oct
 docker run -it --name jupyter -p 8888:8888 -v /d/20190904-Training_Oct:/notebooks qpan/jupyter
 ```
 
-### Windows 10
+### Windows 10, Hyper-V
 
 ```
 cd D:\20190904-Training_Oct
