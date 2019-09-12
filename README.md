@@ -1,3 +1,20 @@
+# Python
+
+```
+print(shape)  # TODO, 20190912, QPan, to delete
+```
+
+# Xarray
+
+## chunk
+
+* Don't use negative value
+* Don't use "auto"
+* To calculate chunck size:
+  * AETI(dtype=short(32bits=4bytes)).chunk[time=1, lat=1000, lon=1000]
+  * Memory/timestep/all   = (1*35915*16493)*4//1024//1024//1024 = 2.2gb
+  * Memory/timestep/chunk = (1*1000*1000)*4/1024/1024 = 3.8mb
+
 # BIOS Virtualization
 
 * Enable Virtualization in BIOS
