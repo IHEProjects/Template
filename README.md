@@ -1,20 +1,7 @@
 # BIOS Virtualization
 
-## Windows 7 enable Virtualization in bios
-
-## Use toolbox to install docker, it will create VirtualBox default machine (boot2docker.iso)
-
-# Docker
-
-[Docker Osgeo GDAL](https://hub.docker.com/r/osgeo/gdal)
-
-[DockerImages](https://wiki.osgeo.org/wiki/DockerImages)
-
-[Docker Toolbox](https://docs.docker.com/toolbox/overview/)
-
-[Docker Community Edition](https://docs.docker.com/docker-for-windows/release-notes/)
-
-[Docker Volume Windows](https://stackoverflow.com/questions/33126271/how-to-use-volume-option-with-docker-toolbox-on-windows)
+* Enable Virtualization in BIOS
+* Use toolbox to install docker, it will create VirtualBox default machine (boot2docker.iso)
 
 VirtualBox -> Settings -> Shared Folders
 
@@ -29,6 +16,14 @@ Docker CMD
 
 * docker-machine ssh
 * ls /d/20190904-Training_Oct
+
+# Docker
+
+* [Docker Osgeo GDAL](https://hub.docker.com/r/osgeo/gdal)
+* [DockerImages](https://wiki.osgeo.org/wiki/DockerImages)
+* [Docker Toolbox](https://docs.docker.com/toolbox/overview/)
+* [Docker Community Edition](https://docs.docker.com/docker-for-windows/release-notes/)
+* [Docker Volume Windows](https://stackoverflow.com/questions/33126271/how-to-use-volume-option-with-docker-toolbox-on-windows)
 
 ## cmd window 1
 
