@@ -33,16 +33,28 @@ Docker CMD
 ## cmd window 1
 
 ```
-# docker build -t qpan/gdal .
-# docker run -it --name gdal qpan/gdal bash
-
-cd /20190904-Training_Oct/Docker/
+cd Docker
 docker build -t qpan/jupyter .
+```
 
-cd /20190904-Training_Oct/
-# Windows
-docker run -it --name jupyter -p 8888:8888 -v /d/20190904-Training_Oct/:/notebooks qpan/jupyter
-# Mac, Linux
+### Windows 7
+
+```
+cd D:\20190904-Training_Oct
+docker run -it --name jupyter -p 8888:8888 -v /d/20190904-Training_Oct:/notebooks qpan/jupyter
+```
+
+### Windows 10
+
+```
+cd D:\20190904-Training_Oct
+docker run -it --name jupyter -p 8888:8888 -v D:/20190904-Training_Oct:/notebooks qpan/jupyter
+```
+
+### Mac, Linux
+
+```
+cd /Volumes/SSD/20190904-Training_Oct/
 docker run -it --name jupyter -p 8888:8888 -v $(PWD):/notebooks qpan/jupyter
 # docker run -d --name jupyter -p 8888:8888 -v $(PWD):/notebooks qpan/jupyter
 ```
@@ -58,14 +70,14 @@ cd /notebooks
 
 gdalinfo --version
 GDAL 3.1.0dev-650fc42f344a6a4c65f11eefc47c473e9b445a68, released 2019/08/25
+
+python3 qpan_gdalwarp.py 
 ```
 
 ## cmd window others
 
 ```
-cd /20190904-Training_Oct/
-
-docker cp /20190904-Training_Oct/ gdal:/
+docker cp /20190904-Training_Oct gdal:/
 ```
 
 ## Docker-machine
@@ -82,16 +94,12 @@ docker-machine stop default
 ## Clean docker
 
 ```
-docker system prune -f \
-&& docker volume prune -f \
-&& docker container prune -f
+docker system prune -f && docker volume prune -f && docker container prune -f
 ```
 
 ## Save docker images
 
 ```
-cd /20190904-Training_Oct/
-
 docker save --output qpan_jupyter.tar qpan/jupyter
 ```
 
