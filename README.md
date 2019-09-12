@@ -10,10 +10,17 @@ print(shape)  # TODO, 20190912, QPan, to delete
 
 * Don't use negative value
 * Don't use "auto"
-* To calculate chunck size:
-  * AETI(dtype=short(32bits=2bytes)).chunk[time=1, lat=1000, lon=1000]
-  * Memory/timestep/all   = (1*35915*16493)*2/1024/1024/1024 = 1.1gb
-  * Memory/timestep/chunk = (1*1000 *1000 )*2/1024/1024      = 1.9mb
+
+To calculate chunck size:
+
+* Input
+  * AETI(dtype=short(16bits=2bytes)).chunk[time=1, lat=1000, lon=1000]
+  * Memory/timestep/all   = 2*(1*35915*16493)/1024/1024/1024 = 1.1gb
+  * Memory/timestep/chunk = 2*(1*1000 *1000 )/1024/1024      = 1.9mb
+* Output
+  * Actual Evapotranspiration(dtype=float(32bits=4bytes)).chunk[time=1, lat=1996, lon=917]
+  * Memory/timestep/all   = 4*(1*35915*16493)/1024/1024/1024 = 2.2gb
+  * Memory/timestep/chunk = 4*(1*1996 *917  )/1024/1024      = 7.0mb
 
 # BIOS Virtualization
 
